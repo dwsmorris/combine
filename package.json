@@ -1,0 +1,29 @@
+{
+  "name": "combine",
+  "version": "0.0.1",
+  "description": "A merge routine that overwrites arrays and deletes keys present in a source object but set to undefined",
+  "main": "dist/combine.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dwsmorris/combine.git"
+  },
+  "keywords": [
+    "merge",
+    "assign",
+    "extend",
+    "react",
+    "redux"
+  ],
+  "author": "Darryl Morris",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dwsmorris/combine/issues"
+  },
+  "homepage": "https://github.com/dwsmorris/combine#readme",
+  "devDependencies": {
+    "mocha": "^3.1.2"
+  }
+}
