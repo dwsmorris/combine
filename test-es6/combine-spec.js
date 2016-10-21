@@ -8,4 +8,7 @@ describe("combine", () => {
 
 	// arrays are overwritten
 	it("overwrites arrays", () => expect(combine({a: [1, 2], b: true}, {a: [3]})).to.eql({a: [3], b: true}));
+
+	// key with undefined value, removes the key
+	it("removes keys from destination that are present but set to undefined in the source", () => expect(combine({a: 1, b: 2, c: 3}, {b: undefined, c: 4})).to.eql({a: 1, c: 4}));
 });

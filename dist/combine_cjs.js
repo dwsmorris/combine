@@ -106,6 +106,8 @@ var extend = function extend() {
 					// Don't bring in undefined values
 				} else if (copy !== undefined) {
 					target[name] = copy;
+				} else {
+					delete target[name];
 				}
 			}
 		}
