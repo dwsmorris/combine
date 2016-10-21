@@ -11,4 +11,5 @@ describe("combine", () => {
 
 	// key with undefined value, removes the key
 	it("removes keys from destination that are present but set to undefined in the source", () => expect(combine({a: 1, b: 2, c: 3}, {b: undefined, c: 4})).to.eql({a: 1, c: 4}));
+	it("supports removing then readding a key", () => expect(combine({a: 1, b: 2}, {a: undefined}, {a: 3})).to.eql({a: 3, b: 2}));
 });

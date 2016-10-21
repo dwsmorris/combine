@@ -28,4 +28,7 @@ describe("combine", function () {
 	it("removes keys from destination that are present but set to undefined in the source", function () {
 		return (0, _index2.default)((0, _combine_cjs2.default)({ a: 1, b: 2, c: 3 }, { b: undefined, c: 4 })).to.eql({ a: 1, c: 4 });
 	});
+	it("supports removing then readding a key", function () {
+		return (0, _index2.default)((0, _combine_cjs2.default)({ a: 1, b: 2 }, { a: undefined }, { a: 3 })).to.eql({ a: 3, b: 2 });
+	});
 });
