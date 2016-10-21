@@ -1,0 +1,16 @@
+{
+    "version": "0.1.0",
+    "command": "cmd",
+    "isShellCommand": true,
+    "tasks": [{
+        "args": ["/c",
+            "${workspaceRoot}/node_modules/.bin/babel", "--presets", "es2015", "test-es6", "--out-dir", "test", "&&",             
+            "${workspaceRoot}/node_modules/.bin/babel", "--presets", "es2015", "dist/combine.js", "--out-file", "dist/combine_cjs.js", "&&",             
+            "npm", "test"
+        ],
+        "taskName": "babelify",
+        "suppressTaskName": true,
+        "isBuildCommand": true,
+        "isWatching": true
+    }]
+}
