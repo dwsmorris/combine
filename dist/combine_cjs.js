@@ -96,14 +96,9 @@ var extend = function extend() {
 				}
 
 				// Recurse if we're merging plain objects or arrays
-				if (deep && copy && (isPlainObject(copy) || (copyIsArray = isArray(copy)))) {
+				if (deep && copy && isPlainObject(copy)) {
 
-					if (copyIsArray) {
-						copyIsArray = false;
-						clone = src && isArray(src) ? src : [];
-					} else {
-						clone = src && isPlainObject(src) ? src : {};
-					}
+					clone = src && isPlainObject(src) ? src : {};
 
 					// Never move original objects, clone them
 					target[name] = extend(deep, clone, copy);

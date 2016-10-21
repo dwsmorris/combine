@@ -21,6 +21,6 @@ describe("combine", function () {
 
 	// arrays are overwritten
 	it("overwrites arrays", function () {
-		return (0, _index2.default)((0, _combine_cjs2.default)({ a: [1, 2] }, { a: [3] })).to.eql({ a: [3] });
+		return (0, _index2.default)((0, _combine_cjs2.default)({ a: [1, 2], b: true }, { a: [3] })).to.eql({ a: [3], b: true });
 	});
 });
